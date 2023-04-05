@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình chuyển đổi tiền tệ </title>
+</head>
+<body>
+<input type="text " id="inputit">
+
+<select id="sl1">
+    <option value="vn">VNĐ</option>
+    <option value="us">USD</option>
+</select>
+<select id="sl2">
+    <option value="us">USD</option>
+    <option value="vn">VNĐ</option>
+</select>
+
+<button onclick="converting()">Convert</button>
+</body>
+
+<script>
+    function converting(){
+        let inputvalue = document.getElementById("inputit").value;
+        let select1 = document.getElementById("sl1").value;
+        let select2 = document.getElementById("sl2").value;
+        if(select1==select2)
+        {
+            alert(inputvalue);
+        }
+        if(select1 == "vn" && select2 == "us"){
+            alert(inputvalue/24000+" $ ")
+        }
+        if(select1 == "us" && select2 == "vn"){
+            alert(inputvalue*24000+" VNĐ")
+        }
+    }
+</script>
+</html>
