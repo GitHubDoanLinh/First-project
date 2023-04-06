@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Chuong trinh may tinh co ban</title>
 </head>
 <body>
-$END$
+<h2>Calculator</h2>
+nhập vào số thứ nhất: <input type="text" id="id1">
+nhập vào số thứ  hai: <input type="text" id="id2">
+
+Chon phep toan :
+<select id="operator">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+
+</select>
+<br><br>
+<button onclick="canculating()">Submit</button>
+ket qua: <input type="text" id="result">
+<script type="text/javascript">
+    function canculating(){
+        var getnumber1 = document.getElementById("id1").value;
+        var getnumber2 = document.getElementById("id2").value;
+        var getoperator = document.getElementById("operator").value;
+        var lastresult =0;
+        if(getoperator == "+"){
+            lastresult = parseInt("id1") + parseInt("id2");
+        }
+        else if(getoperator == "-"){
+            lastresult = parseInt(id1) - parseInt(id2);
+        }
+        else if(getoperator == "*"){
+            lastresult = parseInt(id1) * parseInt(id2);
+        }
+        else if(getoperator == "/"){
+            lastresult = parseInt(id1) / parseInt(id2);
+        }
+
+        document.getElementById("result").value = lastresult;
+
+    }
+</script>
 </body>
+
 </html>
