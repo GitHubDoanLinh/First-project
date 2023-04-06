@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc hanh if elseif else</title>
+</head>
+<body>
+<script>
+  alert("welcome to here Now let's login");
+  let string = prompt("typing your user : ")
+  if(string=="Admin")
+  {
+    let pwstring = prompt("Password ? : ");
+    if(pwstring == "TheMaster")
+    {
+        alert("Welcome")
+    }
+    else if(pwstring == "null"){
+        alert("Canceled")
+    }
+    else {
+        alert("Wrong password")
+    }
+
+  }
+  else if(string == "null"){
+      alert("canceled")
+  }
+  else{
+      alert("i don't know you")
+  }
+
+
+</script>
+</body>
+</html>
