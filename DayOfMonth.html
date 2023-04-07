@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Kiểm tra số ngày trong tháng</h1>
+<input type="number" min="1" max="12" id="month" placeholder="Nhập tháng" style="width: 10%;">
+<button onclick="CheckMonth()">Check</button>
+<p id="displayresult">Đây là nơi hiển thị kết quả </p>
+</body>
+<script>
+  function CheckMonth(){
+    var inputmonth = +document.getElementById("month").value;
+    switch (inputmonth){
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            document.getElementById("displayresult").innerText = "tháng "+inputmonth+" có 31 ngày";
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            document.getElementById("displayresult").innerText = "tháng "+inputmonth+" có 30 ngày";
+            break;
+        case 2:
+            document.getElementById("displayresult").innerText = "tháng "+inputmonth+" có 28 hoặc 29 ngày";
+            break;
+        default:
+            document.getElementById("displayresult").innerText = "nhập sai tháng !";
+    }
+  }
+</script>
+</html>
