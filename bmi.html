@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh chi so bmi</title>
+</head>
+<body>
+<h3>Tính chỉ số bmi của cơ thể</h3>
+<button onclick="cscn()">Bắt đầu</button>
+</body>
+<script>
+    function cscn(){
+        var weight = prompt("Nhap vao can nang : ");
+        var height = prompt("Nhap vao chieu cao :");
+        var bmi = parseInt(weight/Math.pow(height,2));
+        if (bmi < 18)
+            document.write("Underweight");
+        else if (bmi < 25.0)
+            document.write("Normal");
+        else if (bmi < 30.0)
+            document.write("Overweight");
+        else
+            document.write("Obese");
+    }
+</script>
+</html>
