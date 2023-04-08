@@ -1,10 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container
+        {
+            width: 400px;
+            height: 400px;
+            background-color: #eeb8b8;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .results
+        {
+            display: flex;
+            justify-content: stretch;
+            height: 50px;
+            border: 1px solid #ddd;
+        }
+        .result{
+            flex-grow: 1;
+            margin: 5px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: green;
+        }
+        .buttons{
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+        .button{
+            flex-grow: 1;
+            margin: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+            width: 30px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="container">
+    <div class="results">
+        <input type="text" class="result" id="resultInput">
+    </div>
+    <div class="buttons">
+        <button class="button" onclick="buttonHandler(this)">7</button>
+        <button class="button" onclick="buttonHandler(this)">8</button>
+        <button class="button" onclick="buttonHandler(this)">9</button>
+        <button class="button" onclick="buttonHandler(this)">+</button>
+
+    </div>
+    <div class="buttons">
+        <button class="button" onclick="buttonHandler(this)">4</button>
+        <button class="button" onclick="buttonHandler(this)">5</button>
+        <button class="button" onclick="buttonHandler(this)">6</button>
+        <button class="button" onclick="buttonHandler(this)">-</button>
+
+    </div>
+    <div class="buttons">
+        <button class="button" onclick="buttonHandler(this)">1</button>
+        <button class="button" onclick="buttonHandler(this)">2</button>
+        <button class="button" onclick="buttonHandler(this)">3</button>
+        <button class="button" onclick="buttonHandler(this)">*</button>
+
+    </div>
+    <div class="buttons">
+        <button class="button" onclick="buttonHandler(this)">0</button>
+        <button class="button" onclick="buttonHandler(this)">C</button>
+        <button class="button" onclick="buttonHandler(this)">=</button>
+        <button class="button" onclick="buttonHandler(this)">:</button>
+
+    </div>
+</div>
 </body>
+<script>
+    /*let run1 ="";
+    let run2 ="";
+    let opt;
+
+    function buttonHandler(btn){
+        const pressedValue = btn.innerText; // lấy giá trị của button đc nhấn vào
+        const resultInput = document.getElementById('resultInput'); // laaya gía trị hiển thị của button
+
+        if(isNaN(pressedValue)){
+            if(pressedValue == 'C'){
+                run1 = "";
+                run2 = "";
+                opt = undefined;
+                resultInput.value = '';
+                return;
+            }
+            if(pressedValue == "="){
+                const result = perform(run1, run2, opt);
+                resultInput.value = result;
+                run1 = "";
+                run2 = "";
+                opt = undefined;
+            }
+            else {
+                opt = pressedValue;
+
+            }
+
+        }else
+        {
+            if(opt){
+                run2 += pressedValue;
+                resultInput.value = run2;
+            }else{
+                run1 += pressedValue;
+                resultInput.value = run1;
+            }
+        }
+
+        }
+        function  perform( orand1, orand2, otor){
+            orand1 = Number(orand1);
+            orand2 = Number(orand2);
+            switch (otor)
+            {
+                case '+':
+                    return orand1 + orand2
+                case '-':
+                    return orand1 - orand2
+                case '*':
+                    return orand1 * orand2
+                case ':':
+                    return orand1 / orand2
+            }
+        }*/
+
+</script>
 </html>
