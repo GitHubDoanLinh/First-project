@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>So sánh 1 số vs 0</h2>
+<input type="text" id="idnumber" placeholder="Nhập 1 số nguyên tại đây">
+<button onclick="checking()">Check</button>
+</body>
+<script>
+  function checking() {
+    if (document.getElementById("idnumber").value < 0) {
+      document.write("Số "+document.getElementById("idnumber").value+" nhỏ hơn 0")
+    } else {
+      document.write("Số "+document.getElementById("idnumber").value+" lớn hơn 0")
+    }
+  }
+</script>
+</html>

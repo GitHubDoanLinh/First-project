@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính cước điện thoại</title>
+</head>
+<body>
+<h2> Đây là chương trình tính cước điện thoại</h2>
+<input type="text"  id="minuteused" placeholder="Nhập số phút đã gọi">
+<button onclick="canculating()">Tính</button>
+</body>
+<script>
+    function canculating()
+    {
+        const price_per_minute = 1200;// giá cước/phút
+        let charges = price_per_minute*document.getElementById("minuteused").value;
+        alert("Tiền cước điện thoại = "+charges +" VNĐ");
+    }
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền hoa hồng dựa trên doanh số bán hàng</title>
+</head>
+<body>
+<h2>Tính tiền hoa hồng dựa trên doanh số bán hàng trong 1 tháng</h2>
+nhập vào số lượng mặt hàng đã bán trong tháng vừa rồi :
+<input type="text" placeholder="nhập số lượng mặt hàng " id="quantity">
+<button onclick="canculating() ">Ok</button>
+</body>
+<script>
+    function canculating()
+    {
+        const dongia = 50000;
+        let doanhso = document.getElementById("quantity").value * dongia;
+        if(doanhso >= 7000000 && doanhso <= 10000000)
+        {
+            alert("tiền hoa hồng = 500.000 Đ")
+        }
+        else if(doanhso > 10000000 && doanhso <= 15000000)
+        {
+            alert("tiền hoa hồng  = 600.000 Đ")
+        }
+        else if(doanhso > 15000000 && doanhso <= 25000000)
+        {
+            alert("tiền hoa hồng  = 700.000 Đ")
+        }
+        else if(doanhso > 25000000 && doanhso <= 35000000)
+        {
+            alert("tiền hoa hồng  = 850.000 Đ")
+        }
+        else if(doanhso > 35000000)
+        {
+            alert("tiền hoa hồng = 1000.000 Đ")
+        }
+        else if(doanhso <= 7000000)
+        {
+            alert("Không có tiền hoa hồng vì doanh số hơi thấp :)")
+        }
+
+    }
+</script>
+</html>

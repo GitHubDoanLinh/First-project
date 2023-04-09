@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất trong 3 số </title>
+</head>
+<body>
+<h2>Chương trình tìm số lớn nhất trong 3 số</h2>
+  <button onclick="checking()">Tìm max</button>
+</body>
+<script>
+  function checking(){
+    let a = prompt("Nhập vào số đầu tiên ");
+    let b = prompt("Nhập vào số thứ hai ");
+    let c = prompt("nhập vào số thứ ba ");
+    if(a>b)
+    {
+      if(a>c)
+      {
+        alert(a +" là max")
+      }
+      else
+      {
+        alert(c + " là max")
+      }
+    }
+    else if(a<b)
+    {
+      if(b>c)
+      {
+        alert(b + " là max")
+      }
+      else
+      {
+        alert(c +" là max")
+      }
+    }
+    else if(a>c)
+    {
+      if(a>b)
+      {
+        alert(a+" la max")
+      }
+      else {
+        alert(b+ "la max")
+      }
+    }
+    else {
+      alert(c+" la max")
+    }
+  }
+
+</script>
+</html>
