@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giác vuông khi biết 2 cạnh kề </title>
+</head>
+<body>
+<h2>Tính diện tích tam giác vuông</h2>
+<input type="text" id="canha" placeholder="Nhập vào cạnh kề thứ nhất: "><br>
+<input type="text" id="canhb" placeholder="Nhập vào cạnh kề thứ hai : ">
+<button onclick="do_canculating()">Tính</button>
+<p id="display">Kết quả hiển thị tại đây</p>
+
+</body>
+<script>
+  function do_canculating()
+  {
+    let area = parseFloat((document.getElementById("canha").value*document.getElementById("canhb").value)/2);
+    document.getElementById("display").innerText = "diện tích tam giác = "+area;
+  }
+</script>
+</html>

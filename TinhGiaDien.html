@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đây là chương tình tính giá điện</title>
+</head>
+<body>
+<h2>Đây là chương trình tính giá điện dựa trên số kwh đã tiêu thụ</h2>
+<p><b>Quy định như sau:</b></p>
+<p>0kwh => 100kwh : 600đ/kwh</p>
+<p>101kwh => 150kwh : 700đ/kwh</p>
+<p>151kwh => 200kwh : 900đ/kwh</p>
+<p>201khw => +∞ : 1100đ/kwh</p>
+<input type="text" id="amkwh" placeholder="Nhập số kwh đã tiêu thụ">
+<button onclick="do_canculating()">Tính tiền :)</button>
+<p id="displaycost">Số tiền sẽ hiển thị tại đây</p>
+</body>
+<script>
+  function do_canculating()
+  {
+    let amount_kwh = document.getElementById("amkwh").value;
+    const price1 = 600;
+    const price2 = 700;
+    const price3 = 900;
+    const price4 = 1100;
+    if(amount_kwh<=100)
+    {
+        document.getElementById("displaycost").innerText = "số tiền điện = "+ price1*amount_kwh+" VNĐ";
+    }
+    else if(amount_kwh<=150)
+    {
+        document.getElementById("displaycost").innerText = "số tiền điện = "+ parseInt(price1*100 + (amount_kwh-100)*price2)+" VNĐ";
+    }
+    else if(amount_kwh<=200)
+    {
+        document.getElementById("displaycost").innerText = "số tiền điện = "+ parseInt(price1*100 + price2*50 + (amount_kwh-150)*price3)+" VNĐ";
+    }
+    else
+    {
+        document.getElementById("displaycost").innerText = "số tiền điện = "+ parseInt(price1*100 + price2*50 + price3*50 + (amount_kwh-200)*price4)+" VNĐ";
+    }
+  }
+</script>
+</html>

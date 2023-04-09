@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình chuyển đổi từ mét => feet</title>
+</head>
+<body>
+<H2>Chương trình đổi đơn vị mét sang feet</H2>
+<input type="text" id="inputMet" placeholder="Nhập vào chiều dài mét">
+<button onclick="converting()">Tính</button>
+</body>
+<script>
+  function converting()
+  {
+    const metterperfeet = 3.2808;
+    let feet = document.getElementById("inputMet").value*metterperfeet;
+    document.write(document.getElementById("inputMet").value+" Mét = "+ feet+ " feet")
+  }
+</script>
+</html>

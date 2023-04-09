@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 3 canh của 1 tam giac</title>
+</head>
+<body>
+<div>
+  <h2>Chương trình kiểm tra 3 cạnh của 1 tam giác</h2>
+  <input type="text" id="ca" placeholder="Nhập vào cạnh a">
+  <input type="text" id="cb" placeholder="Nhập vào canh b">
+  <input type="text" id="cc" placeholder="Nhập vào cạnh c">
+
+  <button onclick="do_canculating()">Check</button>
+  <p id="display">Kết quả hiển thị tại đây</p>
+</div>
+</body>
+<script>
+  function do_canculating()
+  {
+    let canha = parseFloat(document.getElementById("ca").value);
+    let canhb = parseFloat(document.getElementById("cb").value);
+    let canhc = parseFloat(document.getElementById("cc").value);
+    if(canha>0 && canhb>0 && canhc>0)
+    {
+      if(canha+canhb>canhc && canhb+canhc>canha && canha+canhc>canhb)
+      {
+        document.getElementById("display").innerText = "3 cạnh trên là 3 cạnh của 1 tam giác";
+      }
+    }
+    else
+    {
+      document.getElementById("display").innerText = "3 cạnh trên không là 3 cạnh của 1 tam giác !";
+    }
+
+
+  }
+</script>
+</html>

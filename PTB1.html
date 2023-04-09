@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính phương trình bậc 1</title>
+    <style>
+      div{
+        border: 1px solid black;
+        padding: 20px;
+        height: 160px;
+        width: 400px;
+      }
+    </style>
+</head>
+<body>
+<div>
+  <h2>Chương trình tính phương trình bậc 1</h2>
+  <input type="text" id="thamsoa" placeholder="Nhập vào tham số a">
+  <input type="text" id="thamsob" placeholder="Nhập vào tham số b">
+  <button onclick="do_canculating()">tìm x</button>
+  <p id="display">Kết quả hiển thị tại đây</p>
+</div>
+
+</body>
+<script>
+  function do_canculating()
+  {
+    let tsa = document.getElementById("thamsoa").value;
+    let tsb = document.getElementById("thamsob").value;
+    let x = parseFloat(-tsb/tsa);
+    if(tsa==0)
+    {
+      if(tsb!=0)
+      {
+        document.getElementById("display").innerText = "Phương trình "+tsa+"x +"+tsb+" vô nghiệm !"
+      }
+      else
+      {
+        document.getElementById("display").innerText = "Phương trình "+tsa+"x +"+tsb+" có vô số nghiệm "
+
+      }
+    }
+    else
+    {
+      if(tsb==0)
+      {
+        document.getElementById("display").innerText = "Phương trình "+tsa+"x +"+tsb+" có nghiệm duy nhất x = 0 "
+      }
+      else
+      {
+        document.getElementById("display").innerText = "Phương trình "+tsa+"x +"+tsb+" có nghiệm duy nhất x = "+x;
+      }
+    }
+  }
+</script>
+</html>

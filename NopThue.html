@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<h2>Đây là chương trình tính thuế thu nhập cá nhân</h2>
+<p><b>Quy định như sau:</b></p>
+<p>Lương/năm <60tr : 5%</p>
+<p>Lương/năm 60tr => 120tr : 10%</p>
+<p>Lương/năm 120tr => 216tr : 15%</p>
+<p>Lương/năm 216tr => 384tr : 20%</p>
+<p>Lương/năm 384tr => +∞ : 25%</p>
+
+<input type="text" id="sl" placeholder="Nhập lương tại đây">
+<button onclick="do_canculating()">Tính</button>
+<p id="showtax">Tiền thuế của bạn sẽ hiện thị tại đây</p>
+</body>
+<script>
+  function do_canculating()
+  {
+        let salary = document.getElementById("sl").value;
+        if(salary<60000000)
+        {
+            document.getElementById("showtax").innerText = "thuế thu nhập của bạn là : "+ parseInt(salary-(salary*95/100)) + " VND";
+        }
+        else if(salary<120000000)
+        {
+            document.getElementById("showtax").innerText = "thuế thu nhập của bạn là : "+parseInt(salary-(salary*90/100)) + " VND";
+        }
+        else if(salary<216000000)
+        {
+            document.getElementById("showtax").innerText = "thuế thu nhập của bạn là : "+parseInt(salary-(salary*85/100)) + " VND";
+        }
+        else if(salary<318000000)
+        {
+            document.getElementById("showtax").innerText = "thuế thu nhập của bạn là : "+parseInt(salary-(salary*80/100)) + " VND";
+        }
+        else
+        {
+            document.getElementById("showtax").innerText = "thuế thu nhập của bạn là : "+parseInt(salary-(salary*75/100)) + " VND";
+        }
+  }
+</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tìm nghiệm của ptb2</title>
+  <style>
+    div{
+      border: 1px solid black;
+      padding: 20px;
+      height: 180px;
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <h2>Chương trình tính phương trình bậc 2 ax2 + bx + c = 0</h2>
+  <input type="text" id="thamsoa" placeholder="Nhập vào tham số a">
+  <input type="text" id="thamsob" placeholder="Nhập vào tham số b">
+  <input type="text" id="thamsoc" placeholder="Nhập vào tham số c">
+
+  <button onclick="do_canculating()">tìm x</button>
+  <p id="display">Kết quả hiển thị tại đây</p>
+</div>
+</body>
+<script>
+    let delta = tsb*tsb - 4*tsa*tsc;
+    function do_canculating()
+  {
+      let tsa = document.getElementById("thamsoa").value;
+      let tsb = document.getElementById("thamsob").value;
+      let tsc = document.getElementById("thamsoc").value;
+
+      if(tsa==0)
+      {
+          if(tsb==0 && tsc==0)
+          {
+              document.getElementById("display").innerText = "Phương trình "+tsa+"x2 +"+tsb+"x +"+tsc+" vô số nghiệm"
+          }
+          else if(tsb==0 && tsc!= 0)
+          {
+              document.getElementById("display").innerText = "Phương trình "+tsa+"x2 +"+tsb+"x +"+tsc+" vô nghiệm"
+
+          }
+          else
+          {
+              document.getElementById("display").innerText = "Phương trình "+tsa+"x2 +"+tsb+"x +"+tsc+" có nghiệm x = "+ (-tsc/tsb);
+          }
+      }
+      else
+      {
+          let delta = tsb*tsb - 4*tsa*tsc;
+          if(delta==0)
+          {
+              document.getElementById("display").innerText = "Phương trình "+tsa+"x2 +"+tsb+"x +"+tsc+" có nghiệm kép x1 = x2 = "+ (-tsb/2*tsa);
+
+          }
+          else if(delta<0)
+          {
+              document.getElementById("display").innerText = "Phương trình "+tsa+"x2 +"+tsb+"x +"+tsc+" vô nghiệm"
+          }
+          else
+          {
+                let x1 = (-tsb-Math.sqrt(delta))/(2*tsa);
+                let x2 = (-tsb+Math.sqrt(delta))/(2*tsa);
+              document.getElementById("display").innerText = "Phương trình "+tsa+"x2 +"+tsb+"x +"+tsc+" có 2 no phân biệt x1 = "+ x1 +", x2= "+x2;
+
+          }
+      }
+  }
+</script>
+</html>
