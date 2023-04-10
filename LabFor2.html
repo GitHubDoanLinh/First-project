@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc hanh vong lap for</title>
+</head>
+<body>
+<h2> chương tình tính tổng các số từ 1 => n</h2>
+<input type="text" id="inputn">
+<button onclick="do_canculating()">Tính tổng</button>
+<p id="display"></p>
+</body>
+<script>
+  function do_canculating()
+  {
+    let n = document.getElementById("inputn").value;
+    let sum=0;
+    for(let i=0;i<=n;i++)
+    {
+      sum+=i;
+    }
+    document.getElementById("display").innerText = "tổng từ 1 => "+n+" = "+ sum;
+  }
+</script>
+</html>
