@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc hanh vong lap while 1</title>
+</head>
+<body>
+<h2>Chương trình tính tổng các số từ 1 => n</h2>
+
+<button onclick="do_canculating()">start</button>
+<p id="display"></p>
+<script>
+    function do_canculating()
+    {
+        let num = prompt("nhập vào 1 số :");
+        let total=0;
+        while (num!=-1)
+        {
+            num = prompt("Nhập vào 1 số : ");
+            alert(num);
+            total+=num;
+        }
+        document.getElementById("display").innerText = "tổng = "+parseInt(total);
+
+    }
+</script>
+</body>
+
+</html>
